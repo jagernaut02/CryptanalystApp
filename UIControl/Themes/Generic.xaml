@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/UIControl;component/Themes/RankControl.Generic.xaml"/>
+        <ResourceDictionary Source="/UIControl;component/Themes/DescriptionParametrControl.Generic.xaml"/>
+        <ResourceDictionary Source="/UIControl;component/Themes/SwitchControl.Generic.xaml"/>
+        <ResourceDictionary Source="/UIControl;component/Themes/ConvertControl.Generic.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>
