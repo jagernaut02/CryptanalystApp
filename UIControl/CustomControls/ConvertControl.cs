@@ -114,15 +114,18 @@ namespace UIControl.CustomControls
         private void CoerceValue(DependencyObject obj, object value)
         {
             decimal newValue;
+            ConvertControl control = obj as ConvertControl;
+            if (control == null)
+                return;
+
             try
             {
                 newValue = Convert.ToDecimal(value);
             }
-            catch { return; }
-
-            ConvertControl control = obj as ConvertControl;
-            if (control == null)
-                return ;
+            catch 
+            {
+                newValue = 0; 
+            }
 
             control.InputValue = newValue;
             control.UpdateReultValueValue();

@@ -65,13 +65,13 @@ namespace CryptanalystApp.ViewModels
                     }
                     else
                     {
-                        MessageBox.Show($"Ошибка при выполнении запроса: {response.StatusCode}", "Error", MessageBoxButton.OK);
+                        MessageBox.Show($"Error while executing request: {response.StatusCode}", "Error", MessageBoxButton.OK);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка: {ex.Message}", "Error", MessageBoxButton.OK);
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButton.OK);
             }
         } 
 

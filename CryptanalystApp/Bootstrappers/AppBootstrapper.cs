@@ -75,9 +75,6 @@ namespace CryptanalystApp.Bootstrappers
                 catch (ArgumentException ex)
                 {
                 }
-                catch (BadImageFormatException ex)
-                {
-                }
                 if (assemblyName != null)
                 {
                     byte[] publicKey2 = assemblyName.GetPublicKey();
