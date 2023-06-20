@@ -8,12 +8,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1080">
     <Grid Background="{StaticResource MainBackgroundColorBrush}" Margin="-4">
-        <StackPanel Margin="20">
-            <control:ConvertControl DecimalPlaces="2"
+        <StackPanel>
+            <StackPanel Margin="20">
+                <control:ConvertControl DecimalPlaces="2"
                 FromItemsSource="{Binding AllAssets}" 
                 ToItemsSource="{Binding AllAssets}" 
-                SelectedFromItem="{Binding FromSelectedItem}" 
-                SelectedToItem="{Binding ToSelectedItem}"/>
+                SelectedFromItem="{Binding FromCoinConverterSelectedItem}" 
+                SelectedToItem="{Binding ToCoinConverterSelectedItem}"/>
+            </StackPanel>
+            <StackPanel Margin="20">
+                <control:ConvertControl DecimalPlaces="2"
+                FromItemsSource="{Binding AllAssets}" 
+                ToItemsSource="{Binding BaseCurrencyList}" 
+                SelectedFromItem="{Binding FromCurrencyConverterSelectedItem}" 
+                SelectedToItem="{Binding ToCurrencyConverterSelectedItem}"
+                ResultCurrencySymbol="{Binding ToCurrencyConverterSelectedItem.Symbol}"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </UserControl>

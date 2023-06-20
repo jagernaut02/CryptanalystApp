@@ -9,5 +9,13 @@ namespace CryptanalystApp.Core.Frameworck.Models
         public string Symbol { get; set; }
         public string Name { get; set; }
         public decimal PriceUsd { get; set; }
+
+        public Asset(string id, string symbol, string name, decimal priceUsd)
+        {
+            Id = id;
+            Symbol = symbol;
+            Name = name;
+            PriceUsd = priceUsd;
+        }
     }
 }

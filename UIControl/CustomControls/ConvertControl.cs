@@ -18,6 +18,7 @@ namespace UIControl.CustomControls
         public static readonly DependencyProperty InputValueProperty = DependencyProperty.Register(nameof(InputValue), typeof(decimal), typeof(ConvertControl), new FrameworkPropertyMetadata((decimal)0, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
         public static readonly DependencyProperty ToItemsSourceProperty = DependencyProperty.Register(nameof(ToItemsSource), typeof(List<IAsset>), typeof(ConvertControl));
         public static readonly DependencyProperty SelectedToItemProperty = DependencyProperty.Register(nameof(SelectedToItem), typeof(IAsset), typeof(ConvertControl), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, new PropertyChangedCallback(OnSelectedItemPropertyChanged)));
+        public static readonly DependencyProperty ResultCurrencySymbolProperty = DependencyProperty.Register(nameof(ResultCurrencySymbol), typeof(string), typeof(ConvertControl), new FrameworkPropertyMetadata("USD"));
         private static readonly DependencyProperty ResultValueProperty = DependencyProperty.Register(nameof(ResultValue), typeof(string), typeof(ConvertControl));
 
         public IEnumerable<IAsset> FromItemsSource
@@ -60,6 +61,12 @@ namespace UIControl.CustomControls
         {
             get => (string)GetValue(ResultValueProperty);
             set => SetValue(ResultValueProperty, value);
+        }
+
+        public string ResultCurrencySymbol
+        {
+            get => (string)GetValue(ResultCurrencySymbolProperty);
+            set => SetValue(ResultCurrencySymbolProperty, value);
         }
 
         static ConvertControl()

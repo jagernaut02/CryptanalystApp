@@ -44,7 +44,10 @@
 
                             <TextBlock Foreground="{StaticResource LigtGrayTextColor}"
                                            FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 20 0"
-                                           Text="Result in USD:"/>
+                                           Text="Result in"/>
+                            <TextBlock Foreground="{StaticResource LigtGrayTextColor}"
+                                           FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 20 0"
+                                           Text="{Binding Path=ResultCurrencySymbol, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"/>
                             <Border CornerRadius="5" Background="{StaticResource BorderColorBrush}" Margin="0 20 20 20">
                                 <TextBlock VerticalAlignment="Center" MinWidth="120" Margin="8 0" IsEnabled="False"
                                          Foreground="White" Background="Transparent" FontSize="18" TextAlignment="Left"
